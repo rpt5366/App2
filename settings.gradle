@@ -1,0 +1,4 @@
+include ':app', ':app2_extendsion'
+rootProject.name='App2'
+include ':wearrecog'
+include ':wear2'

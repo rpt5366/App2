@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="15dp"
+    tools:context=".WearActivity"
+    tools:deviceIds="wear_round">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all"
+        >
+
+
+        <Button
+            android:layout_marginTop="0dp"
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:text="Start"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:textSize="15sp"
+            android:layout_below="@+id/start_button"
+            android:id="@+id/stop_button"
+            android:layout_centerHorizontal="true">
+        </Button>
+
+        <ScrollView
+            android:layout_below="@id/stop_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_below="@id/stop_button"
+                android:id="@+id/status"
+                android:textSize="19sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="StandBy"
+                />
+
+        </ScrollView>
+
+    </RelativeLayout>
+</androidx.wear.widget.BoxInsetLayout>

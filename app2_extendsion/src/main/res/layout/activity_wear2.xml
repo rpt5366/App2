@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.app2_extendsion.TestActivity"
+    tools:deviceIds="wear_round"
+    android:background="@color/white">
+
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/start_button"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:padding="1dp"
+        android:text="Start"
+        android:textSize="18sp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerHorizontal="true"
+        />
+    
+    <Button
+        android:padding="1dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:textSize="18sp"
+        android:layout_below="@+id/start_button"
+        android:id="@+id/stop_button"
+        android:layout_centerHorizontal="true"
+
+        android:clickable="false"
+        android:enabled="false"
+        android:visibility="gone"
+        >
+        
+        
+    </Button>
+
+    <Chronometer
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/stop_button"
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:text="YEAH"
+        android:layout_centerHorizontal="true"
+        >
+    </Chronometer>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chrono"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="StandBy"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/connectStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>
